@@ -46,11 +46,56 @@ const LinkedListLOL = [
         "title": "INT Chemical Rankwise Results (CGPA)",
         "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-INT-M.Sc.-CY-CGPA-Sem3.txt"
     },
+    {
+        "title": "Biotechnology Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-BT-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Computer Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-CS-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Chemical Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-CH-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Civil Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-CE-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Electronics Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-EC-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Electrical Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-EE-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Mechanical Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-ME-SGPA-Sem3.txt"
+    },
+    {
+        "title": "Metallurgy Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-MM-SGPA-Sem3.txt"
+    },
+    {
+        "title": "DD Biotechnology Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-DD-BT-SGPA-Sem3.txt"
+    },
+    {
+        "title": "INT Chemical Rankwise Results (SCGPA)",
+        "url": "https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem3/blob/main/Ranked-INT-M.Sc.-CY-SGPA-Sem3.txt"
+    },
 ]
 
 for (const key in LinkedListLOL) {
     var div = document.createElement('div');
     div.setAttribute('class','item');
+    
+    if (LinkedListLOL[key]["title"].includes("SCGPA")) {
+        div.setAttribute('class','itemSCGPA');
+    }
+
     div.innerHTML=`
         <a href="${LinkedListLOL[key]["url"]}" target="_blank"  rel="noopener noreferrer">${LinkedListLOL[key]["title"]}</a>
     `
